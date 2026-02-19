@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>Payment - BrewNova</title>
+</head>
+
+<body>
+    <header class="header" id="header" style="box-shadow: 0 4px 16px hsla(166, 85%, 8%, .3);">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">BrewNova</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="index.html" class="nav__link">HOME</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main section" style="padding-top: 8rem; text-align: center;">
+        <div class="container grid" style="justify-items: center; row-gap: 2rem;">
+            <i class="ri-secure-payment-line" style="font-size: 5rem; color: var(--first-color);"></i>
+            <h1 class="section__title">Secure Payment Gateway</h1>
+            <p class="about__description">
+                This is a <strong>demo environment</strong>. No real transaction will be processed.
+                <br>
+                Your order has been simulated successfully!
+            </p>
+
+            <a href="index.html" class="button" onclick="localStorage.removeItem('cart');">Return to Home</a>
+        </div>
+    </main>
+
+    <footer class="footer" style="padding-top: 2rem;">
+        <span class="footer__copy">&#169; All Rights Reserved By Boeing</span>
+    </footer>
+</body>
+
+</html>

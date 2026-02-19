@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrewNova Cart</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <!-- You may include script here with defer, or include before </body> as shown below -->
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">BrewNova</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">HOME</a></li>
+          <li><a href="index.html#popular" class="nav__link">POPULAR</a></li>
+          <li><a href="index.html#products" class="nav__link">PRODUCTS</a></li>
+          <li><a href="cart.html" class="nav__link active-link">CART</a></li>
+          <li><a href="index.html#contact" class="nav__link">CONTACT</a></li>
+        </ul>
+      </div>
+
+      <!-- Add a cart icon & counter that cart.js updates -->
+      <a href="cart.html" class="nav__link nav__cart" aria-label="Cart">
+        <i class="ri-shopping-bag-3-fill"></i>
+        <span class="cart-count" aria-live="polite">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="main cart-page">
+    <section class="cart section container">
+      <h1 class="cart__title">Your Cart</h1>
+      <div class="cart__layout">
+
+        <!-- Cart Items column: leave empty so cart.js renders items -->
+        <div class="cart__items">
+          <!-- cart.js will populate this area from localStorage -->
+          <article class="cart__card template" hidden>
+            <div class="cart__thumb">
+              <img src="" alt="">
+            </div>
+            <div class="cart_details">
+              <h3 class="cart__name"></h3>
+              <p class="cart__meta"></p>
+              <div class="cart__controls">
+                <label class="qty">
+                  <span class="qty__label">Qty</span>
+                  <input class="qty__input" type="number" min="1" value="1" />
+                </label>
+                <div class="price">
+                  <span class="price__current" data-price="0">$ 0</span>
+                  <button class="remove" title="Remove item" aria-label="Remove">
+                    <i class="ri-delete-bin-6-line"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <div class="cart__empty" hidden>
+            <i class="ri-shopping-cart-line" style="font-size:48px"></i>
+            <p>Your cart is empty. Browse the menu to add delicious coffee!</p>
+            <a href="index.html#products" class="button">Go To Menu</a>
+          </div>
+        </div>
+
+        <!-- Summary column -->
+        <aside class="cart__summary">
+          <div class="summary__card">
+            <h2 class="summary__title">Order Summary</h2>
+            <dl class="summary__list">
+              <div class="summary__row">
+                <dt>Subtotal</dt>
+                <dd id="subtotal">$0</dd>
+              </div>
+              <div class="summary__row">
+                <dt>Delivery</dt>
+                <dd id="delivery">$0</dd>
+              </div>
+              <div class="summary__row">
+                <dt>Discount</dt>
+                <dd id="discount">- $0</dd>
+              </div>
+              <div class="summary__total">
+                <dt>Total</dt>
+                <dd id="total">$0</dd>
+              </div>
+            </dl>
+
+            <form class="coupon" onsubmit="return false;">
+              <input type="text" placeholder="Coupon code" class="coupon__input" />
+              <button type="button" class="coupon__apply">Apply</button>
+            </form>
+
+            <a href="payment.html"> <button class="checkout button button--full">Checkout</button> </a>
+            <p class="secure"><i class="ri-lock-2-line"></i> Secure checkout & 100% quality guarantee</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer--mini">
+    <div class="container">
+      <span class="footer__copy">&#169; All Rights Reserved By Boeing</span>
+    </div>
+  </footer>
+
+  <!-- Include cart.js once, here before the closing body tag -->
+  <script src="./assets/js/cart.js" defer></script>
+</body>
+</html>
